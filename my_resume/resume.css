@@ -21,7 +21,7 @@
     border-color: rgb(23, 80, 80);
     margin-left: -100px;
 }
-h1{
+.contacts{
     float: left;
     margin-top: 9px;
     margin-right: 120px;
@@ -35,4 +35,13 @@ h1{
     margin-left: 100px;
     padding-bottom: 10px;
     color: white;
+}
+.contacts_panel{
+    float: left;
+    padding-top: 10px;
+    margin-top: -500px;
+    margin-left: 100px;
+    padding-bottom: 10px;
+    border-style: solid;
+    color: white;  
 }
