@@ -9,13 +9,30 @@
 }
 .catto{
     float: left;
-    padding-top:  -50px;
-    margin-left: 40px;
+    padding-top: 50px;
+    margin-left: 60px;
     margin-bottom: 40px;
-    border-radius: 50%;
+    border-radius: 10%;
     width: 150 px;
     height: 150px;
 }
 .front_panel{
-    margin-left: -100px
+    float: right
+    border-color: rgb(23, 80, 80);
+    margin-left: -100px;
+}
+h1{
+    float: left;
+    margin-top: 9px;
+    margin-right: 120px;
+    color: aliceblue;
+    padding-left: 100px; 
+}
+.side_section{
+    float: left;
+    padding-top: 10px;
+    margin-top: -700px;
+    margin-left: 100px;
+    padding-bottom: 10px;
+    color: white;
 }
