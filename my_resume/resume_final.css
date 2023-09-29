@@ -70,7 +70,7 @@
   
   .me-img
   {
-      background:url(https://media-exp1.licdn.com/dms/image/C4E03AQGnLq_IB_mf8Q/profile-displayphoto-shrink_400_400/0/1631022739752?e=1648684800&v=beta&t=eICUjHeH_g9GQEItmEMK1j2gCADwqfjrlccSD_5za58) no-repeat center center ;
+      background:url(potato\ for\ resume.JPG) no-repeat center center ;
       background-size:100%;
     background-position:0px;
       border-radius:100%;
@@ -79,7 +79,6 @@
       position:relative;
       width:150px;
   }
-  
   .name-hero h1
   {
       font-family:Open Sans, sans-serif;
@@ -108,7 +107,11 @@
       margin:0 auto;
       width:85%;
   }
-  
+  .name-hero .contact-text{
+    margin:0 auto;
+    width:85%;
+    padding: 60px;
+  }
   .inner
   {
       margin:0 auto;
