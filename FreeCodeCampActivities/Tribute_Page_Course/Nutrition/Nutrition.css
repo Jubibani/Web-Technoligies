@@ -71,3 +71,9 @@ p {
 .medium{
     height: 5px;
 }
+.right{
+    justify-content: flex-end;
+}
+.indent{
+    margin-left: 1em;
+}
