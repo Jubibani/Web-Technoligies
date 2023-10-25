@@ -1,0 +1,13 @@
+@media screen and (max-width: 600px) {
+    .nav {
+      float: none;
+      width: 100%;
+    }
+  }
+form{
+  display: flex;
+}
+#nav-bar{
+  position: fixed;
+  top: 0;
+}
