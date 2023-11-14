@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">We value your input! Help us improve your gaming experience by taking a few minutes to complete our Game Feedback Survey. Share your thoughts, ideas, and suggestions, and be a part of shaping the future of our game. Your feedback matters to us!</p>
+    <br>
+    <div class ="div_wrapper">
+        <form id="survey-form">
+                <label class = "name_label "id="name-label">Name:   
+                    <input placeholder="Enter your name" required id="name" type="text"></input>
+                </label>
+                <div class="divider"></div>
+                <label class = "email_label" id="email-label">Email: 
+                <input placeholder="Enter your email" required id="email" type="email"></input>
+                </label>
+                <div class="divider"></div>
+                <label class = "age_label" id="ager-label">age (optional): 
+                    <input placeholder="age"  required id="age" type="number" min="0" max="10"></input>
+                </label>
+                <div class="divider"></div>
+                <label class = "number_label" id="number-label">Number:
+                    <input placeholder="number"  required id="number" type="number" min="0" max="10"></input>
+                </label>
+                <div class="divider"></div>
+                <p>This is your last chance. After this, there is no turning back. You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill - you stay in Wonderland and I show you how deep the rabbit hole goes.</p>
+                <select id="dropdown">
+                    <option class = "default">take pill</option>
+                    <option class = "option_1"value="option_1">The Blue Pill</option>
+                    <option class = "option_2"value="option_2">The Red Pill</option>
+                </select>
+                <div class="divider"></div>
+                <select id="">
+                    <Label> Test1
+                        <input  value="test1" name='test' type="radio" />
+                    </Label>
+                    <input  value="test2" name='test' type="radio" />
+                </select>
+                <div class="divider"></div>
+                <div class ="checkboxes">
+                    <input type="checkbox" value="checkbox1" />
+                    <input type="checkbox" value="checkbox2" />
+                    <input type="checkbox" value="checkbox3" />
+                </div>
+                <div class="divider"></div>
+                <textarea type="textarea"></textarea>
+                <div class="divider"></div>
+                <button id="submit">Submit</button>
+        </form>
+    </div>
+</body>

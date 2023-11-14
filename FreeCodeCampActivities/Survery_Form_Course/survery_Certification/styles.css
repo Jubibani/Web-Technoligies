@@ -1,0 +1,79 @@
+label{
+    font-size: 20px;
+    color: white;
+}
+input{
+    border-radius: 20px;
+    height: 50px;
+    width: 40%;
+}
+p{
+    font-size: x-large;
+    color: white;
+}
+select{
+    height: 20px;
+    width: 20px;
+}
+.name_label, .email_label, .number_label, select, textarea{
+    margin: 5% 10px;
+}
+
+button{
+    font-weight: 300;
+    background-color: #4CAF50; /* Green */
+    border-radius: 20px;
+    padding: 10px 20px;
+    height: 50%;
+    width: 50%;
+}
+h1{
+    color: white;
+    background-color: #16131a;
+    margin-top: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: purple;
+}
+p{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+h1, p{
+    text-align: center;
+}
+.divider{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+body{
+    background-color:black;
+    margin: 0px;
+}
+textarea{
+    height: 30%;
+    width: 40%;
+}
+form{
+padding: 10% 10%;
+vertical-align: middle;
+align-items: center;
+}
+.div_wrapper{
+display: block;
+text-align: center;
+margin: auto;
+background-color: transparent;
+height: 10%;
+width: 80%;
+border-width: 1px;
+border-style: solid;
+border-radius: 20px;
+border-color:wheat;
+}
+.option_1{
+    background-color: blue;
+}
+.option_2{
+    background-color: red;
+}
