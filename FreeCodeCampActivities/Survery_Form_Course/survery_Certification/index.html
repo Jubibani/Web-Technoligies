@@ -1,51 +1,63 @@
 <!DOCTYPE html>
 <head>
+    <meta charset = "UTF-8">
+    <meta name= "viewport" content="width=device-width, initial=1.0">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <h1 id="title">Survey Form</h1>
     <p id="description">We value your input! Help us improve your gaming experience by taking a few minutes to complete our Game Feedback Survey. Share your thoughts, ideas, and suggestions, and be a part of shaping the future of our game. Your feedback matters to us!</p>
-    <br>
     <div class ="div_wrapper">
         <form id="survey-form">
-                <label class = "name_label "id="name-label">Name:   
-                    <input placeholder="Enter your name" required id="name" type="text"></input>
-                </label>
-                <div class="divider"></div>
-                <label class = "email_label" id="email-label">Email: 
-                <input placeholder="Enter your email" required id="email" type="email"></input>
-                </label>
-                <div class="divider"></div>
-                <label class = "age_label" id="ager-label">age (optional): 
-                    <input placeholder="age"  required id="age" type="number" min="0" max="10"></input>
-                </label>
-                <div class="divider"></div>
-                <label class = "number_label" id="number-label">Number:
-                    <input placeholder="number"  required id="number" type="number" min="0" max="10"></input>
-                </label>
-                <div class="divider"></div>
+            <div class ="to_input">
+                <label class = "name_label "id="name-label">Name:</label>
+                    <input placeholder="What should we call you?" required id="name" type="text"></input>
+            </div>
+            <div class="divider"></div>
+            <div class ="to_input">
+                <label class = "email_label" id="email-label">Email:</label>
+                <input placeholder="Please enter your email" required id="email" type="email"></input>
+            </div>
+            <div class="divider"></div>
+            <div class ="to_input">
+                <label class = "age_label" id="ager-label">age (optional):</label>
+                <input placeholder="How old are you?"  required id="age" type="number" min="0" max="10"></input>
+            </div>
+            <div class="divider"></div>
+            <div class ="to_input">
+                <label class = "number_label" id="number-label">Number:</label>
+                    <input placeholder="Please enter your contact number"  required id="number" type="number" min="0" max="10"></input>
+            </div>
+            <div class="divider"></div>
                 <p>This is your last chance. After this, there is no turning back. You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill - you stay in Wonderland and I show you how deep the rabbit hole goes.</p>
+                <h1>Take pill</h1>
                 <select id="dropdown">
-                    <option class = "default">take pill</option>
+                    <option class = "default">choose here</option>
                     <option class = "option_1"value="option_1">The Blue Pill</option>
                     <option class = "option_2"value="option_2">The Red Pill</option>
                 </select>
                 <div class="divider"></div>
-                <select id="">
-                    <Label> Test1
-                        <input  value="test1" name='test' type="radio" />
-                    </Label>
-                    <input  value="test2" name='test' type="radio" />
-                </select>
+                <p>Do you really want to work in Tech?</p>
+                    <input class="test_radio_1" value="test1" name='test' type="radio" />
+                    <label class = "radio_1_label" id="number-label"> Yes.</label>
+                    <input  class="test_radio_2" value="test2" name='test' type="radio" />
+                    <label class = "radio_2_label" id="number-label"> No.</label>
                 <div class="divider"></div>
+                <h1>Important Question</h1>
                 <div class ="checkboxes">
-                    <input type="checkbox" value="checkbox1" />
-                    <input type="checkbox" value="checkbox2" />
-                    <input type="checkbox" value="checkbox3" />
+                    <p>Do you Love coffee? how much do you like coffee?</p>
+                    <input class="checkbox_1" type="checkbox" value="checkbox1" />
+                    <label class = "checkbox_1_label" id="number-label"> yes</label>
+                    <input class="checkbox_2"type="checkbox" value="checkbox2" />
+                    <label class = "checkbox_2_label" id="number-label"> maybe</label>
+                    <input class="checkbox_3"type="checkbox" value="checkbox3" />
+                    <label class = "checkbox_3_label" id="number-label"> syempre</label>
+                    <input class="checkbox_4"type="checkbox" value="checkbox3" />
+                    <label class = "checkbox_4_label" id="number-label"> !no</label>
                 </div>
                 <div class="divider"></div>
-                <textarea type="textarea"></textarea>
+                <textarea type="textarea" placeholder="PLease Write a small Feedback"></textarea>
                 <div class="divider"></div>
                 <button id="submit">Submit</button>
         </form>
