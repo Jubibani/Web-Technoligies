@@ -1,22 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>
-      Jubibani Portfolio
-    </title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, inital-scale=1.0">
-  <link href="styles.css" rel="stylesheet">
-  <head>
-  <body>
-    <section id="welcome-section">
-    <h1>I am Jubibani</h1>
-    <section id="projects" class ="project-tile">
-      <nav id="navbar">
-        <a href="#project-tile"></a>
-        <a href="" id="profile-link" target="_blank"></a>
+<html lang = "en">
+    <head>
+        <title>Jubibani Portfolio</title>
+        <meta charset = "UTF-8"></charset>
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1 class = "greeting">Well, hello there!</h1>
+    <hr>
+    <header>
+        <nav>
+            <nav class="nav_tab">
+                <a href="#home_id" class="btn"><button class = "home_button">Home</button></a>
+                <a href="#projects_id" class="btn"><button class = "projects_button">Projects</button></a>
+            </nav>
         </nav>
-      <div class="project-tile"></div>
-    </section>
-  </body>
-</html>
+    </header>
+        <section class = "my_description" id="home_id">
+            <div class = "bio_wrapper">
+                <div class="text_box">   
+                    <img class="image" src="pictures/my_pic.jpg" alt="a picture of the developer">        
+                    <h1 class ="Jubibani">- Jubibani -</h1>
+                    <p class = "hello">
+                        Hello! I am <i>Christopher Jiovanni Alambra Orpilla</i>, Jubibani for short. I am a web developer and graphic a designer by career and a game
+                        developer by hobby from the Philippines.
+                    </p>     
+                    <br>   
+                    <p class = "bio"><i>I like to Build things and Fix things.</i></p>
+                    <br>   
+                    <!-- I'd like to hide this. then show after clicked -->
+                    <a href="https://github.com/Jubibani" class = "about" target="_blank">
+                        <button class = "about_button">
+                        About me
+                        </button> 
+                    </a>
+                </div>  
+            </div>
+        </section>
+        <section class = "Projects"  id="projects_id">
+            <div class = "project_wrapper">
+                <h1> - Projects -</h1>
+                <div class="project_box">
+                    <br>
+                    <img class = "web_development"  alt ="web_development_pic" src="pictures/web_development (1).png">
+                    <br>
+                    <img class = "app_development" alt ="app_development_pic" src="pictures/app_development.jpg">
+                    <br>
+                    <img class = "game_development" alt ="game_development_pic" src="pictures/game_development (1).jpg">
+                    <a href="https://cat-bounce.com/"><button class = "jav_button">click me</button></a>  
+                </div>
+            </div>
+        </section>
+    </body>
+</html>            

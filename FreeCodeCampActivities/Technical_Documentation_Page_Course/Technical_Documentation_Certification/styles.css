@@ -1,6 +1,33 @@
 @media screen and (max-width: 600px) {
-    .nav {
-      float: none;
-      width: 100%;
-    }
+  .nav {
+    float: none;
+    width: 100%;
   }
+}
+a {
+  font-weight: bolder;
+}
+main{
+  color: red;
+  text-align: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  width: 40%;
+}
+header{
+  color: blue;
+}
+code{
+  display: block;
+  color: green;
+}
+p {
+  color: white;
+}
+body{
+  background-color: black;
+}
+div{
+  width: 60%;
+  justify-content: center;
+}
