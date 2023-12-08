@@ -1,0 +1,58 @@
+.container{
+    
+    justify-content: center;
+    align-items: center;
+    margin-top: 290px;
+    margin-left: 690px;
+    
+}
+.box_1{
+    border-width: 2px;
+    border-style: solid;
+    border-color: blue;
+
+    float: left;
+
+    justify-content: center;
+    text-align: center;
+
+    height: 120px;
+    width: 120px;
+    
+    margin: 10px 10px 10px 10px;
+}
+.box_2{
+    border-width: 2px;
+    border-style: solid;
+    border-color: purple;
+    
+    float: left;
+
+    justify-content: center;
+    text-align: center;
+
+    height: 120px;
+    width: 120px;
+
+    margin: 10px 10px 10px 10px;
+}
+.box_3{
+    border-width: 2px;
+    border-style: solid;
+    border-color: red;
+    
+    float: left;
+
+    justify-content: center;
+    text-align: center;
+
+    height: 120px;
+    width: 120px;
+
+    margin: 10px 10px 10px 10px;
+}
+
+.clearfix::after{
+    content: "";
+    clear: both;
+}

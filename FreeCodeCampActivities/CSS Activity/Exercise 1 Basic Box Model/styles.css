@@ -1,0 +1,20 @@
+.box1 {
+    background-color: lightblue;
+    border: 5px solid purple; 
+    margin: 20px;
+    padding: 20px; 
+  }
+  
+  .box2 {
+    background-color: pink;
+    border: 3px dotted orange;
+    margin: 50px; 
+    padding: 10px;
+  }
+  
+  .box3 {
+    background-color: yellow;
+    border: 2px dashed green;
+    margin: 10px 30px;
+    padding: 30px 15px;  
+  }

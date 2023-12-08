@@ -1,0 +1,20 @@
+.parent {
+    background: lightblue;
+    padding: 50px;
+  }
+  
+  .child {
+    background: pink;
+    padding: inherit;
+    border: 5px solid navy; 
+  }
+  
+  .grandchild {
+    background: lavender;
+    color: darkgreen;
+    padding: 25px;
+    text-align: center;
+  }
+  p{
+    text-align: center;
+  }

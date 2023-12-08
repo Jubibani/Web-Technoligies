@@ -1,0 +1,349 @@
+body{
+    background-color: #0d0d0d;
+
+}
+/*- - - - - - - - - - - For PC Size - - - - - - - - - - - */
+h1, p,ul, li{
+    color: white;
+}
+p,ul, li{
+    margin: 10px;
+}
+li{
+    float: left;
+}
+img{
+    width:350px;
+    height: 350px;
+    border-radius: 18px;
+}
+.Welcome{
+    height: 50px;
+
+    text-align: center;
+    border-width: 2px;
+    border-radius: 12px;
+    border-style: solid;
+    border-color: #0d0d0d;
+
+    background-color: #404040;
+}
+.content_wrapper{
+
+    height: 90%;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+
+}
+
+.box1{
+    margin: 5px 5px;
+
+    float: left;
+    text-align: center;
+
+    width: 30%;
+    height: 500px;
+
+    border-width: 2px;
+    border-radius: 18px;
+    border-style: solid;
+    border-color: #0d0d0d;
+
+    background-color: #404040;
+}
+.box2{
+    margin: 5px 5px;
+
+    float: left;
+    text-align: center;
+
+    width: 68%;
+    height: 200px;
+
+    border-width: 2px;
+    border-radius: 18px;
+    border-style: solid;
+    border-color: #0d0d0d;
+
+    background-color: #404040;
+}
+.box3{
+    margin: 5px 5px;
+
+    float: left;
+    text-align: center;
+
+    width: 68%;
+    height: 287px;
+
+    border-width: 2px;
+    border-radius: 18px;
+    border-style: solid;
+    border-color: #0d0d0d;
+
+    background-color: #404040;
+}
+
+/*- - - - - - - - - - - For mobile Size - - - - - - - - - - - */
+@media screen and (min-width: 320px) and (max-width: 750px) {
+    h1, p,ul, li{
+        color: white;
+    }
+    p,ul, li{
+        margin: 10px;
+    }
+    li{
+        float: left;
+    }
+    img{
+        width:300px;
+        height: 300px;
+        border-radius: 18px;
+    }
+    .Welcome{
+        height: 50px;
+    
+        text-align: center;
+        border-width: 2px;
+        border-radius: 12px;
+        border-style: solid;
+        border-color: #0d0d0d;
+    
+        background-color: #404040;
+    }
+    .content_wrapper{
+    
+        height: 90%;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    
+        margin: auto;
+    
+    }
+    
+    .box1{
+        margin: 5px 5px;
+    
+        text-align: center;
+    
+        width: 98%;
+        height: 450px;
+    
+        border-width: 2px;
+        border-radius: 18px;
+        border-style: solid;
+        border-color: #0d0d0d;
+    
+        background-color: #404040;
+    }
+    .box2{
+        margin: 5px 5px;
+    
+        float: left;
+        text-align: center;
+    
+        width: 98%;
+        height: 350px;
+    
+        border-width: 2px;
+        border-radius: 18px;
+        border-style: solid;
+        border-color: #0d0d0d;
+    
+        background-color: #404040;
+    }
+    .box3{
+        margin: 5px 5px;
+    
+        float: left;
+        text-align: center;
+    
+        width: 98%;
+        height: 150px;
+    
+        border-width: 2px;
+        border-radius: 18px;
+        border-style: solid;
+        border-color: #0d0d0d;
+    
+        background-color: #404040;
+    }
+}
+/*- - - - - - - - - - - For tablet Size - - - - - - - - - - - */
+@media screen and (min-width: 751px) and (max-width: 1224px) {
+    h1, p,ul, li{
+        color: white;
+    }
+    p,ul, li{
+        margin: 10px;
+    }
+    li{
+        float: left;
+    }
+    img{
+        width:300px;
+        height: 300px;
+        border-radius: 18px;
+    }
+    .Welcome{
+        height: 50px;
+    
+        text-align: center;
+        border-width: 2px;
+        border-radius: 12px;
+        border-style: solid;
+        border-color: #0d0d0d;
+    
+        background-color: #404040;
+    }
+    .content_wrapper{
+    
+        height: 90%;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    
+        margin: auto;
+    
+    }
+    
+    .box1{
+        margin: 5px 5px;
+    
+        text-align: center;
+    
+        width: 98%;
+        height: 450px;
+    
+        border-width: 2px;
+        border-radius: 18px;
+        border-style: solid;
+        border-color: #0d0d0d;
+    
+        background-color: #404040;
+    }
+    .box2{
+        margin: 5px 5px;
+    
+        float: left;
+        text-align: center;
+    
+        width: 98%;
+        height: 350px;
+    
+        border-width: 2px;
+        border-radius: 18px;
+        border-style: solid;
+        border-color: #0d0d0d;
+    
+        background-color: #404040;
+    }
+    .box3{
+        margin: 5px 5px;
+    
+        float: left;
+        text-align: center;
+    
+        width: 98%;
+        height: 150px;
+    
+        border-width: 2px;
+        border-radius: 18px;
+        border-style: solid;
+        border-color: #0d0d0d;
+    
+        background-color: #404040;
+    }
+}
+/*- - - - - - - - - - - For Bigger tablet Size - - - - - - - - - - - */
+@media screen and (min-width: 751px) and (max-width: 1366px) {
+    h1, p,ul, li{
+        color: white;
+    }
+    p,ul, li{
+        margin: 10px;
+    }
+    li{
+        float: left;
+    }
+    img{
+        width:320px;
+        height: 310px;
+        border-radius: 18px;
+
+    }
+    .Welcome{
+        height: 50px;
+    
+        text-align: center;
+        border-width: 2px;
+        border-radius: 12px;
+        border-style: solid;
+        border-color: #0d0d0d;
+    
+        background-color: #404040;
+    }
+    .content_wrapper{
+    
+        height: 90%;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    
+        margin: auto;
+    
+    }
+    
+    .box1{
+        margin: 5px 5px;
+    
+        text-align: center;
+    
+        width: 36%;
+        height: 460px;
+    
+        border-width: 2px;
+        border-radius: 18px;
+        border-style: solid;
+        border-color: #0d0d0d;
+    
+        background-color: #404040;
+    }
+    .box2{
+        margin: 5px 5px;
+    
+        float: left;
+        text-align: center;
+    
+        width: 61%;
+        height: 295px;
+    
+        border-width: 2px;
+        border-radius: 18px;
+        border-style: solid;
+        border-color: #0d0d0d;
+    
+        background-color: #404040;
+    }
+    .box3{
+        margin: 5px 5px;
+    
+        float: left;
+        text-align: center;
+    
+        width: 61%;
+        height: 150px;
+    
+        border-width: 2px;
+        border-radius: 18px;
+        border-style: solid;
+        border-color: #0d0d0d;
+    
+        background-color: #404040;
+    }
+}

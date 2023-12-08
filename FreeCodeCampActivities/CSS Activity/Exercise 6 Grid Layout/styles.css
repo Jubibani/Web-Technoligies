@@ -1,0 +1,23 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    align-items: start; 
+  }
+  h1{
+    text-align: center;
+    color: white;
+  }
+  body{
+    background-color:burlywood;
+  }
+  .grid > div {
+    background: #eee;
+    padding: 20px;
+  }
+  
+  @media(max-width: 500px) {
+    .grid { 
+      grid-template-columns: 1fr;
+    }
+  }

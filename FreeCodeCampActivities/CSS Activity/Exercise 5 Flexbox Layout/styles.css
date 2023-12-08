@@ -1,0 +1,153 @@
+.nav {
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+    padding: 10px;
+    background: #333;
+    border-radius: 18px;
+  
+}
+h2{
+    color: white;
+    margin-left: 10px;
+}
+h2:hover{
+    color:burlywood;
+    transition: 2s;
+    margin-left: 10px;
+    cursor: pointer;
+}
+h1{
+    margin-top: 20px;
+    color: white;
+}
+  
+.nav a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.nav a:hover{
+    font-size: 30px;
+    color: burlywood;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.nav a:after {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.Home{
+    margin: 10px 10px;
+    text-align: center;
+
+
+    height: 120vh;
+    background-color: #333;
+    border-radius: 18px;
+}
+.About{
+    margin: 10px 10px;
+    text-align: center;
+
+
+    height: 120vh;
+    background-color: #333;
+    border-radius: 18px;
+}
+.Products{
+    margin: 10px 10px;
+    text-align: center;
+
+
+    height: 120vh;
+    background-color: #333;
+    border-radius: 18px;
+}
+.Contact{
+    margin: 10px 10px;
+    text-align: center;
+
+    height: 120vh;
+    background-color: #333;
+    border-radius: 18px;
+}
+/* - - - - - - - - - - - - - -For Phone size - - - - - - - - - - - - - -*/
+@media screen and (min-width: 310px) and (max-width: 600px) {
+    .nav {
+        display: flex;
+        justify-content: space-evenly; 
+        align-items: center;
+        padding: 10px;
+        background: #333;
+        border-radius: 18px;
+      
+    }
+
+    .nav a {
+        margin: 0;
+        margin-top: 10px;
+    }
+    .nav a::after {
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    h2{
+        color: white;
+        margin-left: 10px;
+        float: left;
+    }
+    h1{
+        margin-top: 20px;
+        color: white;
+    }
+      
+    .nav a {
+        float: right;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .Home{
+        margin: 10px 10px;
+        text-align: center;
+    
+        height: 90vh;
+        background-color: #333;
+        border-radius: 18px;
+    }
+    .About{
+        margin: 10px 10px;
+        text-align: center;
+    
+        height: 90vh;
+        background-color: #333;
+        border-radius: 18px;
+    }
+    .Products{
+        margin: 10px 10px;
+        text-align: center;
+    
+        height: 90vh;
+        background-color: #333;
+        border-radius: 18px;
+    }
+    .Contact{
+        margin: 10px 10px;
+        text-align: center;
+    
+        height: 90vh;
+        background-color: #333;
+        border-radius: 18px;
+    }
+}

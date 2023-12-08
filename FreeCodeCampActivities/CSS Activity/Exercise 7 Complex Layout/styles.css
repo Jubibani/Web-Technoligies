@@ -1,0 +1,56 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+header {
+  background: #84D2C5;
+  padding: 20px;
+  grid-area: header;
+
+  text-align: center;
+}
+
+section {
+  grid-area: content;  
+
+  text-align: center;
+}
+
+aside {
+  background: #FEC89A; 
+  padding: 20px;
+  grid-area: sidebar;  
+
+}
+h3{
+  text-align: center;
+}
+ul, li{
+  color: white;
+}
+li{
+  float: left;
+  margin-left: 290px;
+  margin-right: 10px;
+  text-align: center;
+}
+footer {
+  background: #84D2C5;
+  padding: 20px; 
+  color: white;
+  grid-area: footer;
+
+  text-align: center;
+}
+h1{
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  grid-template-areas:
+    "header"
+    "content"
+    "sidebar" 
+    "footer";
+}
