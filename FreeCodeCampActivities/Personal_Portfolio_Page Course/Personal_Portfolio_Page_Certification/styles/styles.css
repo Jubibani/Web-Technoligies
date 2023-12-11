@@ -125,8 +125,9 @@ div.text_box{
     justify-content: space-between;
 }
 div.project_box{
+    
     display: block;
-    justify-content: space-between;
+    justify-content: center;
 }
 .box{
     display: flex;
@@ -134,6 +135,7 @@ div.project_box{
     align-items: center;
 }
 .project_box{
+  margin-left: 240px;
   justify-content: center;
 }
 .web_development{
@@ -190,332 +192,24 @@ table{
     border-radius: 50%;
 }
 
-/* ==== Phone Screen ==== (390px) */ 
-@media only screen and (max-width: 390px){
-    /* normal selectors */
-    hr{
-        height: 1PX;
-        background-color: gray;
-        border: none;
-    }
-    header{
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    body{
-        border: 1px solid black;
-    }
-    section{
-        height:120vh ;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        border: 1PX solid BLACK;
-    }
-    div{
-        display: block;
-        width: 40%;
-        justify-content: space-between;
-    }
-    nav{
-        align-self: center;
-        justify-content: center;
-    }
-    .nav_tab{
-        background-color: black; ;
-    }
-    .home_button, .projects_button, .contact_button, .documentation_button{
-        border-radius: 7.5px;
-        border-width: 1px;  
-        border-color: blueviolet;
-        padding: 1.2% 12.5px 1.2%; /*inside the button*/
-        margin: 0px 5px 5px;
-        font-size: 16px;
-    }
-    .about{
-        width: 50%;
-        height: 90%;
-    }
-    .about_button{
-        border-radius: 15px;
-        border-width: 1px;
-        background-color: blueviolet;
-        border-color: blueviolet;
-        color: white;
-        padding: 5px 10px 5px;
-        width: 40%;
-        height: 5%;
-        font-weight: bolder;
-    }
-    .bio_wrapper{
-        display: block;
-        width: 99%;
-        justify-content: space-between;
-    }
-    .game_wrapper.wrapper{
-        display: block;
-        width: 99%;
-        justify-content: space-between;
-    }
-    .greeting{
-        background-color: black;
-        padding-top: 2.5px;
-        padding-bottom: 2.5px;
-        border-width: 1px;
-        border-color: gray;
-    }
-    p.bio{
-        padding-top: 10px;
-        text-align: left;
-    }
-    p.hello{
-        margin-top: 15px;
-    }
-    .was{
-        text-decoration: none; /*disable line*/
-    }
-    .text_box > .Jubibani{
-        font-size: 3rem;
-        padding-top: 30px;
-        padding-bottom: 25px;
-    }
-    div.text_box{
-        display: contents;
-        width: 40%;
-        justify-content: space-between;
-    }
-  .Projects > .project_wrapper > .project_box{
-    display: contents;
-    width: 10%;
-    height: 10%;
-    border-width: medium;
-    border-style: solid;
-    }
-    .web_development_pic, .app_development_pic, .game_development_pic{
-        width: 90%;
-        height: 90%; 
-    }
-    section > .my_description{
-        display: block;
-    }
-    .image{
-        margin-top: 30px;
-        width: 85%;
-        height: 40%;
-        border-radius: 45%;
-    }
-
-    .github_logo, .linkedin_logo{
-        margin: 1% 5%;
-        width: 11.5%;
-        height: 10%;
-        border-radius: 50%;
-    }
-}
-/* ==== Phone Screen ==== (450px) */ 
-@media only screen and (max-width: 450px){
-    /* normal selectors */
-    hr{
-        height: 1PX;
-        background-color: gray;
-        border: none;
-    }
-    header{
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    body{
-        border: 1px solid black;
-    }
-    section{
-        height:120vh ;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        border: 1PX solid BLACK;
-    }
-    div{
-        display: block;
-        width: 99%;
-        justify-content: space-between;
-    }
-    nav{
-        align-self: center;
-        justify-content: center;
-    }
-    .nav_tab{
-        background-color: black; ;
-    }
-    .home_button, .projects_button, .contact_button, .documentation_button{
-        border-radius: 7.5px;
-        border-width: 1px;  
-        border-color: blueviolet;
-        padding: 1.2% 12.5px 1.2%; /*inside the button*/
-        margin: 0px 5px 5px;
-        font-size: 16px;
-    }
-    .about{
-        width: 50%;
-        height: 90%;
-    }
-    .about_button{
-        border-radius: 15px;
-        border-width: 1px;
-        background-color: blueviolet;
-        border-color: blueviolet;
-        color: white;
-        padding: 5px 10px 5px;
-        width: 40%;
-        height: 5%;
-        font-weight: bolder;
-    }
-    .bio_wrapper{
-        display: block;
-        width: 99%;
-        justify-content: space-between;
-    }
-    .project_wrapper{
-        display: block;
-        width: 99%;
-        justify-content: space-between;
-
-    }
-    .game_wrapper.wrapper{
-        display: block;
-        width: 99%;
-        justify-content: space-between;
-    }
-    .greeting{
-        background-color: black;
-        padding-top: 2.5px;
-        padding-bottom: 2.5px;
-        border-width: 1px;
-        border-color: gray;
-    }
-    p.bio{
-        padding-top: 10px;
-        text-align: left;
-    }
-    p.hello{
-        margin-top: 15px;
-    }
-    .was{
-        text-decoration: none; /*disable line*/
-    }
-    .text_box > .Jubibani{
-        font-size: 3rem;
-        padding-top: 30px;
-        padding-bottom: 25px;
-    }
-    div.text_box{
-        display: contents;
-        width: 40%;
-        justify-content: space-between;
-    }
-    .project_box{
-        display: block;
-        margin-left: 10px;
-        margin-right: 10px;
-        justify-content: space-between;
-        width: 95%;
-        height: 85%;
-        border-style: solid;
-        border-radius: 16px;
-        border-color: transparent;
-        background-color: rgb(31, 31, 31);
-    }
-    .box{
-        display: contents;
-        justify-content: space-between;
-    }
-    .project_list{
-        display: block;
-        color: transparent;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-    ul > .web_list{
-        font-size: 20px;
-        color: green;
-    }
-    ul > .app_list{
-        font-size: 20px;
-        color: red;
-    }
-    ul > .game_list{
-        font-size: 20px;
-        color:  rgb(100, 100, 255);
-    }
-    .project_box> .web_development, .app_development, .game_development{
-        margin-top: 20%;
-        margin-bottom: 20%;
-        
-    }
-    .project_box> .web_development{
-        margin-top: 30px;
-        margin-bottom: 20px;
-        width: 10%;
-        height: 10%;
-        border-radius: 14px;
-        border-style: solid;
-        border-width: 1px;
-        border-color: green;
-    }
-    .app_development{
-        margin-top: 30px;
-        margin-bottom: 20px;
-        width: 10%;
-        height: 10%;
-        border-radius: 14px;
-        border-style: solid;
-        border-width: 1px;
-        border-color: red;  
-    }
-    .game_development{
-        margin-top: 30px;
-        margin-bottom: 20px;
-        width: 10%;
-        height: 10%;
-        border-radius: 14px;
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgb(100, 100, 255);     
-    }
-    section > .my_description{
-        display: block;
-    }
-    .contact_box{
-        display: block;
-        margin-left: 10px;
-        margin-right: 10px;
-        justify-content: space-between;
-        width: 95%;
-        height: 85%;
-        border-style: solid;
-        border-radius: 16px;
-        border-color: transparent;
-        background-color: rgb(31, 31, 31);
-    }
-    form{
-        display: contents;
-        padding: 10px 10px;
-        justify-content: space-evenly;
-        color: transparent;
-    }
-    .Name, .email, .number, .input_box{
-        color: transparent;
-    }
-    .image{
-        margin-top: 30px;
-        width: 85%;
-        height: 40%;
-        border-radius: 45%;
-    }
-
-    .github_logo, .linkedin_logo{
-        margin: 1% 5%;
-        width: 11.5%;
-        height: 10%;
-        border-radius: 50%;
-    }
-}
+.card {
+    width: 500px;
+    border: 1px solid #ddd;  
+    border-radius: 4px;
+    overflow: hidden;
+    float: left;
+    margin: 10px;  
+  }
+  
+  .card .card-text{
+    display: none; 
+  }
+  
+  .card:hover {
+    box-shadow: 2px 2px 10px #ddd;  
+  }
+  
+  .card:hover .card-text{
+    display: block;
+    padding: 10px;
+  }
