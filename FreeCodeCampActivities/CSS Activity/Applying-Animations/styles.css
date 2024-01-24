@@ -1,0 +1,242 @@
+html{
+    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    
+}
+body {
+    background-color: rgb(26, 24, 23);
+
+    overflow: hidden;
+}
+p,h1,h2,h3{
+    margin: 0 auto;
+}
+.side-nav-tab{
+    position: fixed;
+    height: 100%;
+    width: 100px;
+
+    margin-top: 10%;
+    margin-left: 78%;
+
+}
+.head-display{
+    
+    position: relative;
+    opacity: none;
+    margin-top: 2%;
+
+    top: 50%;
+    left: 47%;
+    margin: 15 10px 0px 0;
+    transform: all 0.7s;
+} 
+.head-display:hover{
+    color: white;
+    transform: all 0.7s;
+} 
+.menu-icon{
+    height: 25px;
+    width: 25px;
+
+    border-radius: 9px;
+    transition: height 0.5s, width 0.5s;
+    
+}
+.menu-icon:hover{
+    height: 50px;
+    width: 50px;
+    
+}
+.description-section {
+    position: relative;
+    height: 450px;
+    width: 42%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: purple;
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 20%;
+    padding: 20px;
+    transition: height 0.5s, width 0.5s, margin-top 0.5s, border-radius 0.5s;
+
+    cursor: pointer;
+}
+.pic-question{
+    text-align: center;
+    position: absolute;
+
+    width: 45%;
+    background-color: purple;
+    top: 20%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    border-radius: 5px;
+    transition: opacity 0.5s, border-radius 0.9s, left 0.9s;
+}
+.pic-slide{
+    text-align: center;
+    position: absolute;
+    opacity: 0;
+    width: 45%;
+    background-color: purple;
+    top: 60%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    transition: all 0.9s;  
+}
+
+.description-section:hover .pic-slide{
+    text-align: center;
+    position: absolute;
+
+    width: 45%;
+    background-color: white;
+    top: 60%; /* Adjust as needed */
+    left: 73%; /* Adjust as needed */
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+
+    opacity: 0.9;
+    transition: all 0.9s; 
+}
+.my_pic{
+    position: relative;
+
+    height: 85%;
+    width: 45%;
+    opacity: 1;
+    margin-top: 5%;
+    margin-left: 27.5%;
+    margin-right: 25%;
+
+    transition: margin-left 0.5s, margin-right 0.5s, border-radius 0.5s;
+
+    border-radius: 10px;
+    
+    cursor: pointer;
+}
+.description-section:hover .pic-question {
+    text-align: center;
+    position: absolute;
+    width: 45%;
+    left: 73%; /* Adjust as needed */
+    opacity: 2;
+    border-radius: 12px;
+    transition: opacity 0.5s, border-radius 0.9s, left 0.9s, color 0.9s;
+}
+.description-section:hover .my_pic{
+    position: relative;
+
+    height: 85%;
+    width: 46%;
+
+    margin-top: 5%;
+    margin-left: 1%;
+    margin-right: 0%;
+
+    transition: margin-left 0.95s, margin-right 0.95s, border-radius 0.5s;
+
+
+    border-radius: 35px;
+    
+    cursor: pointer;
+}
+.description-section:hover{
+    height: 420px;
+    width: 35%;
+    margin-top: 11%;
+
+    opacity: 0.9s;
+    border-radius: 30px;
+}
+.pic-question:hover{
+    color: white;
+}
+.pic-description{
+    text-align: center;
+    position: absolute;
+
+    height: 10%;
+    width: 45%;
+    left: 73%; /* Adjust as needed */
+    top: 25%; /* Adjust as needed */
+
+    background-color: white;
+    border-radius: 12px;
+    transform: translate(-50%, -50%);
+
+
+    opacity: 0;
+    transition: opacity 0.5s, border-radius 0.9, top 0.9s, height 0.5s;
+}
+
+.pic-question:hover + .pic-description{
+    text-align: center;
+    position: absolute;
+    
+    width: 45%;
+    left: 73%; /* Adjust as needed */
+    top: 35%; /* Adjust as needed */
+
+    background-color: white;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+
+    opacity: 0.9;
+    transition: opacity 0.5s, border-radius 0.9s, top 0.5s;
+}
+/*--------------description-section-2-----------*/
+
+/*-------------------------------Second Div---------------------------------*/
+.backdiv-1{
+    display: block;
+    float: right;
+
+    height: 5%;
+    width: 5%;
+
+    top: -10%;
+
+    border-style: solid;
+    border-color: azure;
+    border-width: 1px;
+    border-radius: 10px;
+    
+    margin: 0 10px 0 10px;
+    transition: all 1s;
+}
+.backdiv-desc{
+    opacity: 0;
+    margin-top: 1px;
+    padding: 10px 10px 10px 10px;
+}   
+.backdiv-desc:hover{
+    margin-top: 3px;
+    opacity: 0.9;
+    color: white;
+    padding: 10px 10px 10px 10px;
+}
+.backdiv-1:hover{
+    text-align: center;
+    float: right;
+
+    height: 10%;
+    width: 23%;
+
+    top: -10%;
+
+    border-style: solid;
+    border-color: purple;
+    border-width: 2px;
+    border-radius: 10px;
+
+    margin: 0 10px 0 10px;
+    transition: all 0.5s;
+}
