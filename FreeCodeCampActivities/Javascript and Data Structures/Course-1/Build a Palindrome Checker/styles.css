@@ -1,0 +1,30 @@
+body{
+    background-color: RGB(32,42,68);
+    margin-left: 25%;
+    margin-top: 18%;
+    margin-right: 25%;
+  }
+  .palindrome-title{
+    color: white;
+    text-align: center;
+  }
+  .title-container {
+    border-radius: 20px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    margin: 10px 10px;
+  
+  }
+  .palindrome-meaning {
+    color: white;
+  }
+  .label-text{
+    color: white;
+  }
+  #result{
+    color: white;
+  }
+  #palindrome-meaning{
+    color: white;
+  }

@@ -1,0 +1,103 @@
+body{
+    background-image: url(https://img.freepik.com/free-photo/humanoid-robot-working-with-machine-factory-ai-generative_123827-23865.jpg?w=1380&t=st=1704938916~exp=1704939516~hmac=0ba929f3f1e9c7a1e1225fab51c6273c4292284014461f91986e236a0bcafdda);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  
+    font-family: 'Chakra petch';
+  }
+  p,.output-text{
+    color: white;
+    font-size: 30px;
+  }
+  .headline-text {
+    color: white;
+    font-size: 45px;
+    text-align: center;
+  
+  }
+  .label-text {
+    color: white;
+    font-size: 35px; 
+  }
+  .div-container { /*The parent Div*/
+    margin: 55px;
+    border-style: solid;
+    border-color: gold;
+    border-width: 1px;
+    border-radius: 20px;
+  
+    position: relative;
+    height: 95%;
+  }
+  .div-input{ /*a child Div*/
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    
+    text-align: center;
+  }
+  #number {
+      height: 50px;
+      width: 190px;
+      border-radius: 15px;
+  
+      font-size: 2.1em;
+      font-family: 'Chakra petch';
+  }
+  #output {
+    color: white;
+    font-size: 50px;
+  }
+  .div-output{
+    text-align: center;
+    position: absolute;
+    border-radius: 12px;
+    top: 60%;
+    left: 40%;
+  
+    border-style: solid;
+    border-color: gold;
+    border-width: 1px;
+    
+    width: 495px;
+    height: 120px;
+  
+  }
+  
+  /*button*/
+  #convert-btn{
+    height: 50px;
+    width: 90px;
+  
+    margin-left: 20px;
+    margin-right:10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+  
+    background-color: gold;
+    color: white; 
+  
+    font-size: 20px;
+  
+    font-family: 'Chakra petch';
+    font-size: 25px;
+  
+  }
+  #reset-btn {
+    height: 50px;
+    width: 90px;
+  
+    margin-left: 0px;
+    border-radius: 12px;
+  
+    background-color: gold;
+    color: white; 
+  
+    font-size: 20px;
+  
+    font-family: 'Chakra petch';
+    font-size: 25px;  
+  }
+  
