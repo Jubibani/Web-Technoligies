@@ -1,7 +1,15 @@
-# `Automate the Mundane`
+# `Meet Cleanie And Quickie`
 
-The process of automation is not only highly efficient but also enjoyable. It's an intriguing challenge to create a simple automation `for personal use`. It involves understanding the nuances of the tasks, devising a strategy to automate them, and finally implementing the plan.
+- `"Cleanie"` is a `bat. file` that cleans your computer’s unnecessary files if executed.
+- `"Quickie"` is also a `bat. file` but opens up your Chrome web page with your necessary sites. making you work-ready and boosting your productivity.
 
 # `Why make this?`
 
-Doing repetitive things. boring things. we could change that to maximize optimum performance. My computer is slow and some desktop apps I use for work don’t have a `start-up` feature. So why not make an `automated script` that opens up the necessary desktop apps and pages for you with one click while you multitask? Let’s do that.
+- Working is a hobby of mine but I also have leisure to play games. that’s when I need to clean and delete the trash from `temp`, `%temp%`, and `prefetch`, and then delete it again from the `recycle bin`. — which is a hassle so I made `"Cleanie"`.
+- Whether I go to class or learn from home, I have to open up and log in again to certain sites for my needed tools which is quite a hassle especially when going to school! —so I made `"Quickie"`
+
+I reckon it would be best to leave repetitive tasks to automation to be able to do more important things, save time, and be productive. 
+
+---
+
+## More to be followed…
