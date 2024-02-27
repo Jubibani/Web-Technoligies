@@ -1,15 +1,20 @@
-﻿#quickiePow is pwsh version for Quicki.bat file
+﻿
+#importing selenium
+Import-Module Selenium
+#quickiePow is pwsh version for Quicki.bat file
 Write-Host "---Hello we opened quickiePow!---"
 
 #password setting
-
 $password = 'HH211R'
+
+#starting a web session
+$driver = Start-SeChrome
 
 #function to be executed
 function openWorkspace() {
     Write-Host "--opening workspace..."
 
-    Start-Process -FilePath "C:\Program Files\Google\Chrome\Application\chrome.exe" -ArgumentList "--incognito", "https://uc-bcf.instructure.com/calendar#view_name=month&view_start=2024-02-21", "https://github.com/"
+    $driver = Start-SeChrome -Incognito -StartURL "https://uc-bcf.instructure.com/calendar#view_name=month&view_start=2024-02-21", "https://github.com/"
 
     Start-Process -FilePath "C:\Program Files\Google\Chrome\Application\chrome.exe" -ArgumentList "--incognito", "--new-window https://www.notion.so/Student-Notes-d19082c1bdf942ebaef6678b0ab342b2" #"add here a VPN chatGPT"
 }
