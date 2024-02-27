@@ -15,7 +15,14 @@ function openWorkspace() {
     Write-Host "--opening workspace..."
 
     $driver = Start-SeChrome -Incognito -StartURL "https://uc-bcf.instructure.com/calendar#view_name=month&view_start=2024-02-21", "https://github.com/"
+    # Navigate to the website where you want to log in
+    $driver.Navigate().GoToUrl("https://www.notion.so/Student-Notes-d19082c1bdf942ebaef6678b0ab342b2")
 
+    # Find the username/email and password input fields and enter credentials
+    $usernameField = $driver.FindElementById("input")
+    $passwordField = $driver.FindElementById("password")
+    $emailNotion.SendKeys("strawberryloli3@gmail.com")
+    $passwordField.SendKeys("your_password")
     Start-Process -FilePath "C:\Program Files\Google\Chrome\Application\chrome.exe" -ArgumentList "--incognito", "--new-window https://www.notion.so/Student-Notes-d19082c1bdf942ebaef6678b0ab342b2" #"add here a VPN chatGPT"
 }
 
