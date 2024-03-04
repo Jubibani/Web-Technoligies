@@ -1,41 +1,29 @@
-﻿
-#importing selenium with where you installed your selenium module
-Import-Module "C:\Program Files\Python311\Lib\site-packages\selenium"
-#quickiePow is pwsh version for Quicki.bat file
-Write-Host "---Hello we opened quickiePow!---"
+﻿# Set the path to Selenium WebDriver DLL and ChromeDriver
+$workingPath = "C:\selenium-selenium-4.18.0"
+$chromeDriverPath = Join-Path -Path $workingPath -ChildPath "chromedriver.exe"
+$webDriverDllPath = Join-Path -Path $workingPath -ChildPath "WebDriver.dll"
 
-#password setting for the script
-$password = 'HH211R'
+# Add the path to Selenium WebDriver DLL to the assembly
+Add-Type -Path $webDriverDllPath
 
-#function to be executed
-function openWorkspace() {
-    Write-Host "--opening workspace..."
+# Start Chrome WebDriver
+$driver = [OpenQA.Selenium.Chrome.ChromeDriver]::new($chromeDriverPath)
 
-    $driver = Start-SeChrome -Incognito -StartURL "https://uc-bcf.instructure.com/calendar#view_name=month&view_start=2024-02-21", "https://github.com/"
-    # Navigate to the website where you want to log in
-    $driver.Navigate().GoToUrl("https://www.notion.so/Student-Notes-d19082c1bdf942ebaef6678b0ab342b2")
+# Navigate to the website where you want to log in
+$driver.Navigate().GoToUrl("https://www.notion.so/Student-Notes-d19082c1bdf942ebaef6678b0ab342b2")
 
-    # Find the elennts to insert the credential
-    $emailField = $driver.FindElementById("notion-email-input-2")
+# Find the element to insert the email
+$emailField = $driver.FindElementById("notion-email-input-2")
+$emailField.SendKeys("cao5224@sdtudents.uc-bcf.edu.ph")
 
-    #wait 3 seconds before inputting passowrd
-    $secondsToSleep = 3
+# Prompt for password
+$passwordInput = Read-Host "Password: " -AsSecureString
+$passwordPlainText = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto([System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($passwordInput))
 
-    for($countStartsFrom = $secondsToSleep; $countStartsFrom -gt 0; $countStartsFrom--){
-    Write-Host "waiting in $countStartsFrom"
-    Start-Sleep -Seconds 1
-    }
+# Example: Finding and interacting with password field
+$passwordField = $driver.FindElementById("password-field-id")
+$passwordField.SendKeys($passwordPlainText)
 
-    $emailField.SendKeys("cao5224@sdtudents.uc-bcf.edu.ph")
-}
-
-
-#verify the user
-Read-Host "Password: " -AsSecureString
-
-if ($password -eq 'HH211R') {
-    Write-Host "correct password"
-    openWorkspace
-    } else {
-    Write-Host "Incorrect password"
-    }
+# Example: Clicking on login button
+$loginButton = $driver.FindElementById("login-button-id")
+$loginButton.Click()
