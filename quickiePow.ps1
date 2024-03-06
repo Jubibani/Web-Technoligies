@@ -1,34 +1,41 @@
 ﻿# Import Selenium WebDriver module
 Import-Module Selenium
 
-# Set the path to ChromeDriver
-$chromeDriverPath = "C:\selenium-selenium-4.18.0\chromedriver.exe"
+# Set the path to ChromeDriver (change it if you have to)
+$chromeDriverPath = "C:\selenium-selenium-4.18.0\selenium-selenium-4.18.0"
 
+# $passwordToQuickie = "HH211R"
+# $passwordInput = Read-Host "Enter Password" -AsSecureString
 # Create a new ChromeDriver instance
 $driver = New-Object OpenQA.Selenium.Chrome.ChromeDriver($chromeDriverPath)
-function loginToQuickie () {
-    $passwordToQuickie = "HH211R"
-    $passwordInput = Read-Host "Enter Passowrd" -AsSecureString
-    if ($passwordInput == $passwordToQuickie) {
-        Read-Host "Access Granted!"
-        # Navigate to the website where you want to log in
-        $driver.Navigate().GoToUrl("https://www.notion.so/Student-Notes-d19082c1bdf942ebaef6678b0ab342b2")
 
-        # Find the element to insert the email
-        $emailField = $driver.FindElementById("notion-email-input-2")
-        $emailField.SendKeys("cao5224@sdtudents.uc-bcf.edu.ph")
+# if ($passwordInput -eq $passwordToQuickie) {
+#     Write-Host "Access Granted!"
+#     loginToQuickie
+# }
+function loginToQuickie {
+    # Navigate to the website where you want to log in
+    $driver.Navigate().GoToUrl("https://www.notion.so/Student-Notes-d19082c1bdf942ebaef6678b0ab342b2")
 
-        # Prompt for password
-        $passwordInput = Read-Host "Password: " -AsSecureString
-        $passwordPlainText = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto([System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($passwordInput))
+    
+    # Wait for the email input field to be visible
+    $wait = New-Object OpenQA.Selenium.Support.UI.WebDriverWait($driver, [timespan]::FromSeconds(10))
+    $emailField = $wait.Until({
+        param ($driver)
+        $element = $driver.FindElementById("notion-email-input-2")
+        if ($element.Displayed) {
+            $element
+        }
+    })
+    #im adding a delay
+    Write-Host "delaying"
+    Start-Sleep -Seconds 5
+    Write-Host "done delaying"
+    # Enter the email address
+    # Find the element to insert the email
+    $emailField = $driver.FindElementById("notion-email-input-2")
+    $emailField.SendKeys("cao5224@sdtudents.uc-bcf.edu.ph")
 
-        # Example: Finding and interacting with password field
-        $passwordField = $driver.FindElementById("password-field-id")
-        $passwordField.SendKeys($passwordPlainText)
 
-        # Example: Clicking on login button
-        $loginButton = $driver.FindElementById("login-button-id")
-        $loginButton.Click()
-
-    }
 }
+loginToQuickie   
