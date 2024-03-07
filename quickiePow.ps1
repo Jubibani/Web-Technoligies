@@ -7,20 +7,14 @@ $chromeDriverPath = "C:\selenium-selenium-4.18.0\selenium-selenium-4.18.0"
 # Create ChromeOptions instance and set unhandledPromptBehavior to ignore
 $chromeOptions = New-Object OpenQA.Selenium.Chrome.ChromeOptions
 $chromeOptions.AddArgument("--unhandledPromptBehavior=ignore")
+$chromeOptions.AddArgument("--incognito")  # Added incognito argument here
 
 # Create a new ChromeDriver instance with ChromeOptions
 $driver = New-Object OpenQA.Selenium.Chrome.ChromeDriver($chromeDriverPath, $chromeOptions)
-
-
-# if ($passwordInput -eq $passwordToQuickie) {
-#     Write-Host "Access Granted!"
-#     loginToQuickie
-# }
-
 function delay {
     #im adding a delay. Displaying the count down with a for loop since powshell doesnt have a built-in countdown.
     Write-Host "Delaying before sending keys to email"
-    $sleepDuration = 6
+    $sleepDuration = 3
     for ($i = $sleepDuration; $i -ge 0; $i--) {
         Write-Host "Waiting... $($i)s remaining"
         Start-Sleep -Seconds 1
@@ -32,15 +26,15 @@ function switchWindow {
    $driver.SwitchTo().Window($driver.WindowHandles[-1])
 }
 function loginToUcCanvasUsingQuickie{
-    $driver.Navigate().GoToUrl("https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=d9049f1e-bc5a-47db-a706-afff21f24a89&redirect_uri=https%3A%2F%2Fsso.canvaslms.com%2Flogin%2Foauth2%2Fcallback&response_type=code&scope=openid+email&state=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhYWNfaWQiOjE2OTM2MDAwMDAwMDAwMDAwMiwibm9uY2UiOiJhMTY2YTA3YTUyMzE0YmU0MWFmMmM2YTQ0NTQ4NGEyMTU0OGJhYTRiZjZlNzdiZTciLCJob3N0IjoidWMtYmNmLmluc3RydWN0dXJlLmNvbSIsImV4cCI6MTcwOTczNjYzNX0.Nn13bZRb5ApqN0D2Qe1joI7HHD9hOntJUE6dW8zaA2A&sso_reload=true#view_name=month&view_start=2022-02-07")
+    $driver.Navigate().GoToUrl("https://uc-bcf.instructure.com/")
     
     #implement delay to wait for booting process
     delay
     Write-Host "delaying"
     #we enter the school email for our canvas
     Write-Host "Entering School Email"
-    $emailField = $driver.FindElementById("i0116")
-    $emailField.SendKeys("cao5224@students.uc-bcf.edu.ph")
+    $emailSchool = $driver.FindElementById("i0116")
+    $emailSchool.SendKeys("cao5224@students.uc-bcf.edu.ph")
 
     #click next button after entering my gmail
     Write-Host "Clicking Next Button"
@@ -52,8 +46,8 @@ function loginToUcCanvasUsingQuickie{
 
     #enter password
     Write-Host "Entering School Password"
-    $emailField = $driver.FindElementById("i0118")
-    $emailField.SendKeys("Jubibi'sstrawbibi")
+    $emailSchoolPass = $driver.FindElementById("i0118")
+    $emailSchoolPass.SendKeys("Jubibi'sstrawbibi")
 
     #click next button to submit to login
     Write-Host "Clicking Next Button"
@@ -68,21 +62,42 @@ function loginToUcCanvasUsingQuickie{
     $enterNextButton.Click()
 
     Write-Host "you should be logged in to UC Canvas By Now!"
-}   
+
+    Write-Host "delay with 2 seconds for upcoming boot site"
+    Start-Sleep -Seconds 2
+}
+function loginToGithubUsingQuickie {
+    $driver.Navigate().GoToUrl("https://github.com/")
+    #implement delay to wait for booting process
+    delay
+
+    #sign in
+    $signInButton = $driver.FindElementByClassName("HeaderMenu-link--sign-in")
+    $signInButton.Click()
+    Write-Host "signinButton Clicked!"
+
+    # Wait for the login field to be available
+    Start-Sleep -Seconds 3
+
+    #username and password for my github
+    $loginField = $driver.FindElementById("login_field")
+    $loginField.SendKeys("Jubibani")
+
+    $passwordField = $driver.FindElementById("password")
+    $passwordField.SendKeys("jubibi'sstrawbibi")
+
+    Write-Host "Username and password successfully entered!"
+
+    # Click the Sign-in button
+    $signInButton = $driver.FindElementByClassName("btn-primary")
+    $signInButton.Click()
+    Write-Host "Sign-in Button Clicked"
+}
+  
 function loginToNotionUsingQuickie {
     # Navigate to the website where you want to log in
-    $driver.Navigate().GoToUrl("https://www.notion.so/Student-Notes-d19082c1bdf942ebaef6678b0ab342b2")
+    $driver.Navigate().GoToUrl("https://www.notion.so/login")
 
-    
-    # # Wait for the email input field to be visible
-    # $wait = New-Object OpenQA.Selenium.Support.UI.WebDriverWait($driver, [timespan]::FromSeconds(10))
-    # $emailField = $wait.Until({
-    #     param ($driver)
-    #     $element = $driver.FindElementById("notion-email-input-2")
-    #     if ($element.Displayed) {
-    #         $element
-    #     }
-    # })
     #im adding a delay. Displaying the count down with a for loop since powshell doesnt have a built-in countdown.
     delay
     #click for the gmail butto
@@ -95,24 +110,28 @@ function loginToNotionUsingQuickie {
     Write-Host "switched to mini window"
     Write-Host "done delaying for gmail input"
 
-    # Enter the Gmail address
-    $emailField = $driver.FindElementByXPath("//input[@id='identifierId']")
-    $emailField.SendKeys("strawberryloli3@gmail.com")
+    delay
 
+    # Enter the Gmail address
+    $emailField = $driver.FindElementById("identifierId")
+    $emailField.SendKeys("strawberryloli3@gmail.com")
+    Write-Host "gmail successfully entered"
     # Find the "Next" button by XPath
     $nextButton = $driver.FindElementByXPath("//button[@type='button']//span[text()='Next']")
+    Write-Host "nextButton element identified"
 
     # Click the "Next" button
     $nextButton.Click()
-
-#     # Find the "Continue with email" button
-#     $continueWithEmailButton = $driver.FindElementByXPath("//div[text()='Continue with email']")
-
-#     # Click the button to continue with email
-#     $continueWithEmailButton.Click()
-#     Write-Host "button Clicked"
+    Write-Host "nextButton clicked!"
+    # Find the "Continue with email" button
+    $continueWithEmailButton = $driver.FindElementByXPath("//div[text()='Continue with email']")
+    Write-Host "emailButton element identified"
+    # Click the button to continue with email
+    $continueWithEmailButton.Click()
+    Write-Host "emailbutton Clicked"
     
 }
 
-# loginToQuickie   
-loginToUcCanvasUsingQuickie
+# loginToUcCanvasUsingQuickie
+# loginToNotionUsingQuickie   
+loginToGithubUsingQuickie
