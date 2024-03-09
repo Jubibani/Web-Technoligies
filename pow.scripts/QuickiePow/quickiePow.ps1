@@ -136,6 +136,6 @@ function loginToNotionUsingQuickie {
     
 }
 
-# loginToUcCanvasUsingQuickie 
-# loginToGithubUsingQuickie
+loginToUcCanvasUsingQuickie 
+loginToGithubUsingQuickie
 loginToNotionUsingQuickie  
