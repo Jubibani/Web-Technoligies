@@ -14,7 +14,7 @@ $driver = New-Object OpenQA.Selenium.Chrome.ChromeDriver($chromeDriverPath, $chr
 function delay {
     #im adding a delay. Displaying the count down with a for loop since powshell doesnt have a built-in countdown.
     Write-Host "Delaying before sending keys to email"
-    $sleepDuration = 3
+    $sleepDuration = 2
     for ($i = $sleepDuration; $i -ge 0; $i--) {
         Write-Host "Waiting... $($i)s remaining"
         Start-Sleep -Seconds 1
@@ -56,7 +56,7 @@ function loginToUcCanvasUsingQuickie{
 
     #click yes button
     Write-Host "delay with 2 seconds"
-    Start-Sleep -Seconds 2
+    Start-Sleep -Seconds 1
     Write-Host "Clicking 'Yes' Button"
     $enterNextButton = $driver.FindElementById("idSIButton9")
     $enterNextButton.Click()
@@ -70,21 +70,21 @@ function loginToGithubUsingQuickie {
     $driver.Navigate().GoToUrl("https://github.com/")
     #implement delay to wait for booting process
     delay
-
-    #sign in
-    $signInButton = $driver.FindElementByClassName("HeaderMenu-link--sign-in")
+    # Click the "Sign in" button
+    $signInButton = $driver.FindElementByClassName("d-inline-block")
     $signInButton.Click()
+    Write-Host "Sign-in Button Clicked"
     Write-Host "signinButton Clicked!"
 
     # Wait for the login field to be available
-    Start-Sleep -Seconds 3
+    Start-Sleep -Seconds 2
 
     #username and password for my github
     $loginField = $driver.FindElementById("login_field")
     $loginField.SendKeys("Jubibani")
 
     $passwordField = $driver.FindElementById("password")
-    $passwordField.SendKeys("jubibi'sstrawbibi")
+    $passwordField.SendKeys("Jubibi'sstrawbibi")
 
     Write-Host "Username and password successfully entered!"
 
@@ -92,6 +92,11 @@ function loginToGithubUsingQuickie {
     $signInButton = $driver.FindElementByClassName("btn-primary")
     $signInButton.Click()
     Write-Host "Sign-in Button Clicked"
+
+    Write-Host "you should be logged in to your Github By Now!"
+
+    Write-Host "delay with 2 seconds for upcoming boot site"
+    Start-Sleep -Seconds 2
 }
   
 function loginToNotionUsingQuickie {
@@ -123,15 +128,14 @@ function loginToNotionUsingQuickie {
     # Click the "Next" button
     $nextButton.Click()
     Write-Host "nextButton clicked!"
-    # Find the "Continue with email" button
-    $continueWithEmailButton = $driver.FindElementByXPath("//div[text()='Continue with email']")
-    Write-Host "emailButton element identified"
-    # Click the button to continue with email
-    $continueWithEmailButton.Click()
-    Write-Host "emailbutton Clicked"
+
+    Write-Host "you should be logged in to your Notion By Now!"
+
+    Write-Host "delay with 2 seconds for upcoming boot site"
+    Start-Sleep -Seconds 2
     
 }
 
-# loginToUcCanvasUsingQuickie
-# loginToNotionUsingQuickie   
-loginToGithubUsingQuickie
+# loginToUcCanvasUsingQuickie 
+# loginToGithubUsingQuickie
+loginToNotionUsingQuickie  
