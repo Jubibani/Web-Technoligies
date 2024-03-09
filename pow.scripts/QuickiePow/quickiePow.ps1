@@ -67,6 +67,12 @@ function loginToUcCanvasUsingQuickie{
     Start-Sleep -Seconds 2
 }
 function loginToGithubUsingQuickie {
+    # Open a new browser window
+    $driver.ExecuteScript("window.open();")
+
+    # Switch to the newly opened window
+    switchWindow
+
     $driver.Navigate().GoToUrl("https://github.com/")
     #implement delay to wait for booting process
     delay
@@ -100,8 +106,15 @@ function loginToGithubUsingQuickie {
 }
   
 function loginToNotionUsingQuickie {
-    # Navigate to the website where you want to log in
-    $driver.Navigate().GoToUrl("https://www.notion.so/login")
+   # Create ChromeOptions instance for the new window
+   $newChromeOptions = New-Object OpenQA.Selenium.Chrome.ChromeOptions
+   $newChromeOptions.AddArgument("--incognito")
+
+   # Create a new ChromeDriver instance with ChromeOptions for the new window
+   $newDriver = New-Object OpenQA.Selenium.Chrome.ChromeDriver($chromeDriverPath, $newChromeOptions)
+
+    # Navigate to the website where you want to log in (in the new window)
+    $newDriver.Navigate().GoToUrl("https://www.notion.so/login")
 
     #im adding a delay. Displaying the count down with a for loop since powshell doesnt have a built-in countdown.
     delay
