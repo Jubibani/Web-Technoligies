@@ -34,11 +34,10 @@ body {
 }
 .BMO-input {
   width: 308px;
-  height: 29px;
+  height: 35px;
   
   background-color: #0C2424;
-  border-width: 5px;
-  border-style: solid;
+  border: 5px solid black;
   border-radius: 12.5px;
   
   position: absolute;
@@ -51,14 +50,24 @@ body {
   top: 71%;
   margin-left: 3.5%;
 }
-.Button-1, .Button-2, .Button-3, .Button-4, .Button-5, .Button-5, .Button-6 ,.Button-7, .Button-8, .Button-9, .Button-0 {
+.Button-1, .Button-2, .Button-3, .Button-4, .Button-5, .Button-6 ,.Button-7, .Button-8, .Button-9, .Button-0 {
   margin: 8px;
   width:80;
   height: 48;
-  Background-color: 2432A8;
+  Background-color: #2432A8;
   border-width: 5px;
   border-style: solid;
   border-radius: 18px;
+
+  transition: background-color 0.3s ,width 0.3s, height 0.3s ease, margin 0.5s ease;
+}
+.Button-1:active, .Button-2:active, .Button-3:active, .Button-4:active, .Button-5:active, .Button-6:active ,.Button-7:active, .Button-8:active, .Button-9:active, .Button-0:active {
+  Background-color: #1a226e;
+
+  width:70;
+  height: 38;
+  margin-right: 12px;
+  margin-left: 12px;
 }
 .triangle-container {
   position: absolute;
@@ -84,26 +93,60 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
+.triangle-border-color:active {
+  width: 0;
+  height: 0;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-bottom: 50px solid black; /*-10*/
+}
+.triangle-background-color:active {
+  width: 0;
+  height: 0;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 40px solid #91155f;
+}
+.triangle-border-color, .triangle-background-color {
+  transition: border-left 0.3s ease, border-right 0.3s , border-bottom 0.3s ease;
+}
 .yellow-circle{
   position: absolute;
   width: 57px;
   height: 49px;
   border-radius: 50%;
   border: 5px solid black;
-  background-color:BCCB0A;
+  background-color:#BCCB0A;
 
-  top: 90%;
+  top: 91%;
   left: 60.5%;
+
+  transition: width 0.3s ease, height 0.3s ease;
 }
-.green-circle{
+.yellow-circle:active {
+  width: 49px;
+  height: 45px;
+
+  background-color:#96a30e;
+}
+.green-circle{ 
   position: absolute;
   width: 107px;
   height: 96px;
 
   border-radius: 50%;
   border: 5px solid black;
-  background-color: 25CB0A;
+  background-color: #25CB0A;
 
   top: 83%; 
   left: 75%;
+
+  transition: width 0.3s ease, height 0.3s ease;
+}
+.green-circle:active{ 
+  width: 97px;
+  height: 86px;
+
+  background-color: #248914;
+
 }
