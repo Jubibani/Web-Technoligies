@@ -1,61 +1,109 @@
 body {
-    height: 100%;
-    width: 100%;
-    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8f730b7a-3cfe-45f3-bd4f-a3553538a548/d4a6hvp-867c00e0-9d76-4ef7-bd5d-2727a5d2559f.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhmNzMwYjdhLTNjZmUtNDVmMy1iZDRmLWEzNTUzNTM4YTU0OFwvZDRhNmh2cC04NjdjMDBlMC05ZDc2LTRlZjctYmQ1ZC0yNzI3YTVkMjU1OWYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.9hg1H-bqXYn1CKCvJJAEiK4ME5ROrwxIr1b2wJGa83Q");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-  }
-  .BMO-body{
-    width: 588px;
-    height: 676px;
-    border-width: 5px;
-    border-style: solid;
-    border-radius: 8.5%;
-    background-color: #2DD7D7;
+  height: 100%;
+  width: 100%;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8f730b7a-3cfe-45f3-bd4f-a3553538a548/d4a6hvp-867c00e0-9d76-4ef7-bd5d-2727a5d2559f.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhmNzMwYjdhLTNjZmUtNDVmMy1iZDRmLWEzNTUzNTM4YTU0OFwvZDRhNmh2cC04NjdjMDBlMC05ZDc2LTRlZjctYmQ1ZC0yNzI3YTVkMjU1OWYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.9hg1H-bqXYn1CKCvJJAEiK4ME5ROrwxIr1b2wJGa83Q");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.BMO-body{
+  width: 588px;
+  height: 676px;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 8.5%;
+  background-color: #2DD7D7;
+
+  position:relative;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+.BMO-screen{
+  width: 512px;
+  height: 384px;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 5%;
+  background-color: FFFFFF;
+
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%)
+}
+.BMO-input {
+  width: 308px;
+  height: 29px;
   
-    position:relative;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-  }
-  .BMO-screen{
-    width: 512px;
-    height: 384px;
-    border-width: 5px;
-    border-style: solid;
-    border-radius: 5%;
-    background-color: FFFFFF;
+  background-color: #0C2424;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 12.5px;
   
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%)
-  }
-  .BMO-input {
-    width: 308px;
-    height: 29px;
-    
-    background-color: #0C2424;
-    border-width: 5px;
-    border-style: solid;
-    border-radius: 12.5px;
-    
-    position: absolute;
-    top: 65%;
-    margin-left: 5%;
-  }
-  .Keypad {
-    position: relative;
-    top: 71%;
-    margin-left: 3.5%;
-  }
-  .Button-1, .Button-2, .Button-3, .Button-4, .Button-5, .Button-5, .Button-6 ,.Button-7, .Button-8, .Button-9 {
-    margin: 8px;
-    width:80;
-    height: 48;
-    Background-color: 2432A8;
-    border-width: 5px;
-    border-style: solid;
-    border-radius: 18px;
-  }
+  position: absolute;
+  top: 65%;
+  margin-left: 5%;
+}
+/*-------------------Buttons and Keypads-------------------*/
+.Keypad {
+  position: relative;
+  top: 71%;
+  margin-left: 3.5%;
+}
+.Button-1, .Button-2, .Button-3, .Button-4, .Button-5, .Button-5, .Button-6 ,.Button-7, .Button-8, .Button-9, .Button-0 {
+  margin: 8px;
+  width:80;
+  height: 48;
+  Background-color: 2432A8;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 18px;
+}
+.triangle-container {
+  position: absolute;
+  top: 70%;
+  left: 57.5%;
+}
+.triangle-border-color{
+ position: relative;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 60px solid black; 
+}
+.triangle-background-color{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 50px solid #D8168A;
+  top: 6px; /* Adjust this value to control the vertical position of the inner triangle */
+  left: 50%;
+  transform: translateX(-50%);
+}
+.yellow-circle{
+  position: absolute;
+  width: 57px;
+  height: 49px;
+  border-radius: 50%;
+  border: 5px solid black;
+  background-color:BCCB0A;
+
+  top: 90%;
+  left: 60.5%;
+}
+.green-circle{
+  position: absolute;
+  width: 107px;
+  height: 96px;
+
+  border-radius: 50%;
+  border: 5px solid black;
+  background-color: 25CB0A;
+
+  top: 83%; 
+  left: 75%;
+}
