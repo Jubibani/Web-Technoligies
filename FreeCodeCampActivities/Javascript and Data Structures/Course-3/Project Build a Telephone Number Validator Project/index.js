@@ -1,9 +1,24 @@
 //make the variables
 const userInput = document.getElementById("user-input");
+const closeInput = document.getElementById("user-input-close");
 const checkButton = document.getElementById("check-btn");
 const clearButton = document.getElementById("clear-btn");
 const resultDiv = document.getElementById("results-div");
 
+let isClosed = false;
+
+//button for input
+closeInput.addEventListener("click", () => {
+    if (!isClosed) {
+      closeInput.style.top = '63%';
+      closeInput.style.height = '10px';
+      isClosed = true;
+  } else {
+      closeInput.style.height = '29px';
+      closeInput.style.top = '65%';
+      isClosed = false;
+  }
+});
 checkButton.addEventListener("click", () => {
   if (userInput.value === "") {
     return alert("Please provide a phone number");
