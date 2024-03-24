@@ -1,29 +1,48 @@
 <!DOCTYPE html>
   <head>
     <link href = "styles.css" rel="stylesheet">
+    <!--my fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <title>Number Validator</title>
   </head>
   <body>
     <div class="BMO-body">
-      <div class="BMO-screen" id="results-div"></div>
-      <input class="BMO-input" id="user-input">
+      <div class="BMO-screen" id="results-div">
+        <div class="eyes">
+          <div class="eye" id="left-eye"></div>
+          <div class="eye" id="right-eye"></div>
+          <svg width="150" height="150" id="mouth-box">
+            <!-- <circle cx="50" cy="50" r="21" stroke="black" stroke-width="4" fill="#25CB0A"/> -->
+             <path d="M30 70 Q50 90 70 70" stroke="black" fill="none" stroke-width="4" />
+          </svg>
+        </div>
+      </div>
+      <div class="BMO-input-close" id="user-input-close"></div>
+      <input class="BMO-input" id="user-input" placeholder="Enter Number to Validate" autocomplete="off"> 
         </input>
       <div class="Keypad">
-        <div class ="Buttons-Row">
-          <button class="Button-1"></button>
-          <button class="Button-2"></button>
-          <button class="Button-3"></button>
+        <div class ="Buttons-column-1">
+          <button class="Button-1" type="button" onclick="pushButton(this)">1</button>
+          <button class="Button-4" type="button" onclick="pushButton(el)">4</button>
+          <button class="Button-7">7</button>
         </div>
-        <div class ="Buttons-Row">
-          <button class="Button-4"></button>
-          <button class="Button-5"></button>
-          <button class="Button-6"></button>
-           <button class="Button-0"></button>
+        <div class ="Buttons-column-2">
+          <button class="Button-2">2</button>
+          <button class="Button-5">5</button>
+          <button class="Button-8">8</button>
         </div>
-        <div class ="Buttons-Row">
-          <button class="Button-7"></button>
-          <button class="Button-8"></button>
-          <button class="Button-9"></button>
+        <div class ="Buttons-column-3">
+          <button class="Button-3">3</button>
+          <button class="Button-6">6</button>
+          <button class="Button-9">9</button>
+        </div>
+        <div class = "Button-column-4">
+          <button class="Button-0">0</button>
         </div>
       </div> 
       <div class="triangle-container">
