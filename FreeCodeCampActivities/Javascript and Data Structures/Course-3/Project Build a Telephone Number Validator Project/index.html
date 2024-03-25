@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
   <head>
+    <meta charset="utf-8">
     <link href = "styles.css" rel="stylesheet">
     <!--my fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,39 +12,67 @@
     <title>Number Validator</title>
   </head>
   <body>
-    <div class="BMO-body">
-      <div class="BMO-screen" id="results-div"></div>
-      <div class="BMO-input-close" id="user-input-close"></div>
-      <input class="BMO-input" id="user-input" placeholder="Enter Number to Validate">
-        </input>
-      <div class="Keypad">
-        <div class ="Buttons-column-1">
-          <button class="Button-1">1</button>
-          <button class="Button-4">4</button>
-          <button class="Button-7">7</button>
+    <div class="BMO-container">
+      <div class="BMO-body">
+        <div class="BMO-screen">
+          <div class="eyes">
+            <div class="eye" id="left-eye"></div>
+            <div class="eye" id="right-eye"></div>
+            <svg width="150" height="150" id="mouth-box">
+              <!-- <circle cx="50" cy="50" r="21" stroke="black" stroke-width="4" fill="#25CB0A"/> -->
+              <path d="M30 70 Q50 90 70 70" stroke="black" fill="none" stroke-width="4" />
+            </svg>
+          </div>
+          <div class ="results" id="results-div">
+
+          </div>
         </div>
-        <div class ="Buttons-column-2">
-          <button class="Button-2">2</button>
-          <button class="Button-5">5</button>
-          <button class="Button-8">8</button>
+        <div class="BMO-input-close" id="user-input-close"></div>
+        <input class="BMO-input" id="user-input" placeholder="Enter Number to Validate" autocomplete="off">
+
+        <div class="Keypad">
+          <div class ="Buttons-column-1">
+            <button class="Button-1" type="button" onclick="pushButton(this)">1</button>
+            <button class="Button-4" type="button" onclick="pushButton(this)">4</button>
+            <button class="Button-7" type="button" onclick="pushButton(this)">7</button>
+          </div>
+          <div class ="Buttons-column-2">
+            <button class="Button-2" type="button" onclick="pushButton(this)">2</button>
+            <button class="Button-5" type="button" onclick="pushButton(this)">5</button>
+            <button class="Button-8" type="button" onclick="pushButton(this)">8</button>
+          </div>
+          <div class ="Buttons-column-3">
+            <button class="Button-3" type="button" onclick="pushButton(this)">3</button>
+            <button class="Button-6" type="button" onclick="pushButton(this)">6</button>
+            <button class="Button-9" type="button" onclick="pushButton(this)">9</button>
+          </div>
+          <div class = "Button-column-4">
+            <button class="Button-0" type="button" onclick="pushButton(this)">0</button>
+          </div>
+        </div> 
+        <div class="triangle-container">
+          <div class="triangle-border-color">
+            <div class="triangle-background-color"></div>
+          </div>
         </div>
-        <div class ="Buttons-column-3">
-          <button class="Button-3">3</button>
-          <button class="Button-6">6</button>
-          <button class="Button-9">9</button>
-        </div>
-        <div class = "Button-column-4">
-          <button class="Button-0">0</button>
-        </div>
-      </div> 
-      <div class="triangle-container">
-        <div class="triangle-border-color">
-          <div class="triangle-background-color"></div>
-        </div>
+        <button class="yellow-circle" id="clear-btn" type="button" onclick="clearButton(this)"></button>
+
+        <button class="green-circle" id="check-btn"></button>
+
+        <!--legs and hands-->
+        <div class ="shoulder-left"></div>
+        <div class="shoulder-right"></div>
       </div>
-      <button class="yellow-circle" id="clear-btn"></button> 
-      <button class="green-circle" id="check-btn"></button> 
+        <div class="left-hand"></div>
+        <div class="right-hand"></div>
+
+        <div class="left-leg"></div>
+        <div class="right-leg"></div>
+
+        <div class="left-foot"></div>
+        <div class="right-foot"></div>
+      
     </div>
   <script src = "script.js"></script>
   </body>
-<html>
+</html>
