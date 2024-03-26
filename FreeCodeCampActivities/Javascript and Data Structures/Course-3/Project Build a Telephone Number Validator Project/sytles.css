@@ -31,6 +31,17 @@ body {
   background-size: cover;
   background-position: center center;
 }
+.BMO-container {
+  position: relative;
+  height: 900px;
+  width: 900px;
+
+  border: 2px solid black;
+
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 .BMO-body{
   width: 588px;
   height: 676px;
@@ -39,12 +50,200 @@ body {
   border-radius: 8.5%;
   background-color: #2DD7D7;
 
-  position:relative;
+  position: absolute;
   top: 50%;
   left:50%;
   transform: translate(-50%, -50%);
 
   box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+/*--legs and hands--*/
+.shoulder-left{
+  position: absolute;
+  width: 25.19px;
+  height: 63.92px;
+
+  background-color: #2432A8;
+  border: 5px solid black;
+  border-radius: 20px;
+  top: 65%;
+  left: -6%;
+
+}
+.shoulder-right{
+  position: absolute;
+  width: 25.19px;
+  height: 63.92px;
+
+  background-color: #2432A8;
+  border: 5px solid black;
+  border-radius: 20px;
+  top: 65%;
+  left: 100.5%;
+
+}
+.left-hand{
+  position: relative;
+  width: 36.59px;
+  height: 240.46px;
+  
+  background-color: #2DD7D7;
+  border: 5px solid black;
+  border-radius: 20px;
+
+  top: 61%;
+  left: 9%;
+  transform: rotate(-157.48deg);
+}
+.left-finger-container {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+
+  top:77%;
+  left: -0.5%;
+  transform: rotate(-157.48deg);
+}
+.finger-1 {
+  position: absolute;
+  height: 30px;
+  width: 7px;
+  border: 5px solid black;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 10px;
+  border-bottom: none;
+  background-color: #2DD7D7;
+}
+.finger-2 {
+  position: absolute;
+  height: 30px;
+  width: 8px;
+  border: 5px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: none;
+  background-color: #2DD7D7;
+
+  left: 14%;
+}
+.finger-3 {
+  position: absolute;
+  height: 30px;
+  width: 7px;
+  border: 5px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 18px;
+  left: 29.3%;
+  border-bottom: none;
+  background-color: #2DD7D7;
+}
+.right-finger-container {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+
+  top:78.5%;
+  left: 83.5%;
+  transform: rotate(157.48deg);
+}
+.finger-5 {
+  position: absolute;
+  height: 30px;
+  width: 7px;
+  border: 5px solid black;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 10px;
+  border-bottom: none;
+  background-color: #2DD7D7;
+}
+.finger-6 {
+  position: absolute;
+  height: 30px;
+  width: 8px;
+  border: 5px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: none;
+  background-color: #2DD7D7;
+
+  left: 14%;
+}
+.finger-7 {
+  position: absolute;
+  height: 30px;
+  width: 7px;
+  border: 5px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 18px;
+  left: 29.3%;
+  border-bottom: none;
+  background-color: #2DD7D7;
+}
+.right-hand{
+  position: absolute;
+  width: 36.59px;
+  height: 240.46px;
+  
+  background-color: #2DD7D7;
+  border: 5px solid black;
+  border-radius: 20px;
+
+  top: 61%;
+  left: 86%;
+  transform: rotate(157.48deg);
+}
+.left-leg{
+  position: absolute;
+  width: 77.93px;
+  height: 240.46px;
+
+  background-color: #2DD7D7;
+  border: 5px solid black;
+  border-radius: 57px;
+  top: 75%;
+  left: 15.5%;
+
+  transform: rotate(-157.48deg);
+}
+.right-leg{
+  position: absolute;
+  width: 77.93px;
+  height: 240.46px;
+
+  background-color: #2DD7D7;
+  border: 5px solid black;
+  border-radius: 57px;
+  top: 75%;
+  left: 75%;
+
+  transform: rotate(157.48deg);
+}
+.left-foot{
+  position: absolute;
+  width: 82px;
+  height: 133px;
+
+  background-color: #189292;
+  border: 5px solid black;
+  border-radius: 57px;
+  top: 86.5%;
+  left: 10.5%;
+
+  transform: rotate(-18.42deg);
+}
+.right-foot {
+  position: absolute;
+  width: 82px;
+  height: 133px;
+
+  background-color: #189292;
+  border: 5px solid black;
+  border-radius: 57px;
+  top: 86.5%;
+  left: 79.5%;
+
+  transform: rotate(18.42deg);
 }
 .BMO-screen{
   width: 512px;
@@ -60,6 +259,19 @@ body {
   transform: translateX(-50%);
 
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+#results-div {
+  top: 51%;
+  position: absolute;
+  height: 160px;
+  width: 480px;
+
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /*eyes*/
 body, html {
@@ -85,10 +297,12 @@ body, html {
 
 #left-eye {
   left: calc(50% - 75px);
+  margin: 0px -35px;
 }
 
 #right-eye {
   left: calc(50% + 25px);
+  margin: 0px 35px;
 }
 #mouth-box {
   left: calc(50% + 50px); /* Adjust as needed */
@@ -191,6 +405,8 @@ body, html {
   position: absolute;
   top: 70%;
   left: 57.5%;
+
+  cursor: pointer;
   
 }
 .triangle-border-color{

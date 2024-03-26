@@ -11,6 +11,10 @@ const mouth = document.getElementById('mouth-box');
 
 let isClosed = false;
 
+// const backgroundAudio = new Audio("https://audiotrimmer.com/download.php?date=01&file=adventure%20time%202%20%28mp3cut.net%29-%5BAudioTrimmer.com%5D.mp3");
+// backgroundAudio.loop = true; 
+// backgroundAudio.play();
+
 //button for input
 closeInput.addEventListener("click", () => {
     if (!isClosed) {
@@ -22,6 +26,8 @@ closeInput.addEventListener("click", () => {
       closeInput.style.top = '65%';
       isClosed = false;
   }
+  const audio = new Audio('https://audiotrimmer.com/download.php?date=01&file=dvd-player-%5BAudioTrimmer.com%5D.wav');
+  audio.play();
 });
 
 //moving eyes 
@@ -62,14 +68,25 @@ function moveEyesAndMouth(mouseX, mouseY) {
 
 
 //buttons being functional
-function pushButton(el){
-  //where to add the numbers
-  let text = getElementById("user-input");
-  var number = el.innerHTML;
-  text.value = text.value + number;
-};
+function pushButton(button) {
+  // Get the value of the button clicked
+  const value = button.innerText;
+  
+  // Append the value to the input field
+  const userInput = document.getElementById("user-input");
+  userInput.value += value;
+
+  // Play a sound when the button is clicked
+  const audio = new Audio("https://audiotrimmer.com/download.php?date=01&file=Cartoon%20Mouse%20Click%20-%20Free%20Sound%20Effect-%5BAudioTrimmer.com%5D.mp3"); // Replace 'https://example.com/path/to/soundfile.mp3' with the actual URL of your audio file
+  audio.play();
+}
+
+
+
 //Validating the numbers
 checkButton.addEventListener("click", () => {
+  const audio = new Audio("https://audiotrimmer.com/download.php?date=01&file=421582__uberbosser__spacebarkey-%5BAudioTrimmer.com%5D.wav");
+  audio.play();
   if (userInput.value === "") {
     return alert("Please provide a phone number");
   } else if (userInput.value === "1 555-555-5555") {
@@ -126,6 +143,8 @@ checkButton.addEventListener("click", () => {
     resultDiv.textContent = "Invalid US number: (555)5(55?)-5555";
   } else if (userInput.value === "55 55-55-555-5") {
     resultDiv.textContent = "Invalid US number: 55 55-55-555-5";
+  } else {
+    resultDiv.textContent = "Invalid US number!";
   }
 
   console.log("CheckButton Clicked");
@@ -133,6 +152,9 @@ checkButton.addEventListener("click", () => {
 
 clearButton.addEventListener("click", () => {
   resultDiv.textContent = "";
+  userInput.value = "";
   console.log("Element removed");
+  const audio = new Audio("https://audiotrimmer.com/download.php?date=01&file=421582__uberbosser__spacebarkey-%5BAudioTrimmer.com%5D.wav");
+  audio.play();
 });
 
