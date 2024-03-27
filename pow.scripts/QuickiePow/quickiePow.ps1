@@ -1,6 +1,6 @@
 ﻿# Import Selenium WebDriver module
 Import-Module Selenium
- 
+
 # Set the path to ChromeDriver (change it if you have to)
 $chromeDriverPath = "C:\selenium-selenium-4.18.0"
 # Start ChromeDriver process
@@ -9,6 +9,11 @@ Start-Process -FilePath "C:\selenium-selenium-4.18.0\chromedriver.exe" -WindowSt
 $chromeOptions = New-Object OpenQA.Selenium.Chrome.ChromeOptions
 $chromeOptions.AddArgument("--unhandledPromptBehavior=ignore")
 $chromeOptions.AddArgument("--incognito")  # Added incognito argument here
+
+# Add user agent and disable automation flags to mimic a real user
+$chromeOptions.AddArgument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36")
+$chromeOptions.AddArgument("--disable-blink-features=AutomationControlled")
+
 
 # Create a new ChromeDriver instance with ChromeOptions
 $driver = New-Object OpenQA.Selenium.Chrome.ChromeDriver($chromeDriverPath, $chromeOptions)
@@ -69,10 +74,12 @@ function loginToUcCanvasUsingQuickie{
     Start-Sleep -Seconds 2
 }
 function loginToClaudeAi {
+    Write-Host "delay with 2 seconds for upcoming boot site"
+    Start-Sleep -Seconds 2
     # # Make new window for my boy claude
-    # $driver.ExecuteScript("window.open();")
+    $driver.ExecuteScript("window.open();")
 
-    # switchWindow
+    switchWindow
 
     $driver.Navigate().GoToUrl("https://claude.ai/login");
 
@@ -92,7 +99,7 @@ function loginToClaudeAi {
 
 }
 function loginToGithubUsingQuickie {
-        # Open a new browser window
+    # Open a new browser window
     $driver.ExecuteScript("window.open();")
 
     # Switch to the newly opened window
@@ -155,8 +162,7 @@ function loginToNotionUsingQuickie {
     Write-Host "done delaying for gmail input"
 
     delay
-
-    # Enter the Gmail address
+    # Enter the Gmail 
     $emailField = $driver.FindElementById("identifierId")
     $emailField.SendKeys("strawberryloli3@gmail.com")
     Write-Host "gmail successfully entered"
