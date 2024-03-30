@@ -75,13 +75,10 @@ function pushButton(button) {
   // Append the value to the input field
   const userInput = document.getElementById("user-input");
   userInput.value += value;
-<<<<<<< HEAD:FreeCodeCampActivities/Javascript and Data Structures/Course-3/Project Build a Telephone Number Validator Project/index.js
 
   // Play a sound when the button is clicked
   const audio = new Audio("https://audiotrimmer.com/download.php?date=01&file=Cartoon%20Mouse%20Click%20-%20Free%20Sound%20Effect-%5BAudioTrimmer.com%5D.mp3"); // Replace 'https://example.com/path/to/soundfile.mp3' with the actual URL of your audio file
   audio.play();
-=======
->>>>>>> caae4c4e7662907e593c5ed29b3c61461956971c:FreeCodeCampActivities/Javascript and Data Structures/Course-3/Project Build a Telephone Number Validator Project/script.js
 }
 
 
