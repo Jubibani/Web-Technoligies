@@ -7,13 +7,16 @@ const resultDiv = document.getElementById("results-div");
 
 const leftEye = document.getElementById('left-eye');
 const rightEye = document.getElementById('right-eye');
+const beeleftEye = document.getElementById('beeLeft-eye');
+const beerightEye = document.getElementById('beeRight-eye');
 const mouth = document.getElementById('mouth-box');
+
 
 let isClosed = false;
 
-// const backgroundAudio = new Audio("https://audiotrimmer.com/download.php?date=01&file=adventure%20time%202%20%28mp3cut.net%29-%5BAudioTrimmer.com%5D.mp3");
-// backgroundAudio.loop = true; 
-// backgroundAudio.play();
+const backgroundAudio = new Audio("https://drive.google.com/file/d/1WpEjIgG10HAE-0Y-HQqzVRc-HtWGffkp/view?usp=sharing");
+backgroundAudio.loop = true; 
+backgroundAudio.play();
 
 //button for input
 closeInput.addEventListener("click", () => {
@@ -28,6 +31,7 @@ closeInput.addEventListener("click", () => {
   }
   const audio = new Audio('https://audiotrimmer.com/download.php?date=01&file=dvd-player-%5BAudioTrimmer.com%5D.wav');
   audio.play();
+  console.log("close-input clicked");
 });
 
 //moving eyes 
@@ -55,6 +59,8 @@ function moveEyesAndMouth(mouseX, mouseY) {
 
   leftEye.style.transform = `translate(${Math.cos(angleLeft) * distanceLeft}px, ${Math.sin(angleLeft) * distanceLeft}px)`;
   rightEye.style.transform = `translate(${Math.cos(angleRight) * distanceRight}px, ${Math.sin(angleRight) * distanceRight}px)`;
+  beeleftEye.style.transform = `translate(${Math.cos(angleLeft) * distanceLeft}px, ${Math.sin(angleLeft) * distanceLeft}px)`;
+  beerightEye.style.transform = `translate(${Math.cos(angleRight) * distanceRight}px, ${Math.sin(angleRight) * distanceRight}px)`;
 
    // Calculate mouth position relative to eye center
   const mouthX = eyeCenterX; // Adjust the value according to your layout
@@ -77,10 +83,9 @@ function pushButton(button) {
   userInput.value += value;
 
   // Play a sound when the button is clicked
-  const audio = new Audio("https://audiotrimmer.com/download.php?date=01&file=Cartoon%20Mouse%20Click%20-%20Free%20Sound%20Effect-%5BAudioTrimmer.com%5D.mp3"); // Replace 'https://example.com/path/to/soundfile.mp3' with the actual URL of your audio file
+  const audio = new Audio("https://audiotrimmer.com/download.php?date=01&file=Cartoon%20Mouse%20Click%20-%20Free%20Sound%20Effect-%5BAudioTrimmer.com%5D.mp3");
   audio.play();
 }
-
 
 
 //Validating the numbers
@@ -158,3 +163,8 @@ clearButton.addEventListener("click", () => {
   audio.play();
 });
 
+
+// //bee random 
+// const element = document.getElementById('beeContainer');
+// element.style.setProperty('--left-offset', Math.random() * 200 + 'px');
+// element.style.setProperty('--top-offset', Math.random() * 200 + 'px');
