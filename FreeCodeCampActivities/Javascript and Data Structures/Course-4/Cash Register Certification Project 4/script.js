@@ -1,7 +1,9 @@
 const cash = document.getElementById("cash");
 const purchase = document.getElementById("purchase-btn");
 const changeDue = document.getElementById("change-due");
+
 let price = 1.87;
+
 
 let cid = [
   ["PENNY", 1.01],
@@ -15,68 +17,70 @@ let cid = [
   ["ONE HUNDRED", 100]
 ];
 
-// to classify the cash
-const denomination = [
-  ["PENNY", 1.01], 
-  ["NICKEL", 2.05],
-  ["DIME", 3.1],
-  ["QUARTER", 4.25],
-  ["ONE", 90],
-  ["FIVE", 55],
-  ["TEN", 20],
-  ["TWENTY", 60],
-  ["ONE HUNDRED", 100]
-]
 
 //Functions
-
-// cheking of funds
-const hasSufficientFunds = () => {
-   return parseFloat(cash.value) >= price;
-};
-
 
 
 
 // to check the total of cid
 const getTotalCashinDrawer = (cid) => {
-  const cidValues = cid.map(cidValue => cidValue[1]);
+  let cidValues = cid.map(cidValue => cidValue[1]);
 
   //adding up together
-  const totalCashValue = cidValues.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-  console.log(totalCashValue);
+  let totalCashValue = parseFloat(cidValues.reduce((accumulator, currentValue) => accumulator + currentValue, 0));
+  return totalCashValue;
 };
 
 
 //function assignment
-const totalCashinDrawer = getTotalCashinDrawer(cid);
+let totalCashinDrawer = getTotalCashinDrawer(cid);
 
 // to check insufficient change
-  const calculateChangeDue = (price, totalCashValue) => {
-  
-    //insufficient changedue
-    if (totalCashValue >= customerChange){
-      return customerChange = price - cash.value;
+const  calculateChangeDue = (price, totalCashinDrawer) => {
+ 
+    let change =  changeDue.value;
+
+    console.log("raw cash value: ", cash.value);
+
+    if (change === undefined) {
+      console.log("raw change value: ", "No Sale");
+    } else {
+       console.log("raw change value: ", change);
+    };
+   
+
+    //cid is greater than cash.value
+    if (cash.value >= price && cash.value <= totalCashinDrawer) {
+
+      //change
+      let result = cash.value - price;
+      change = result;
+
+      console.log("change: ", change);
+      
+      //change for drawer
+      let acceptPayment = totalCashinDrawer + cash.value;
+      console.log("increased money in drawer:", acceptPayment); 
+
+      let giveChange = totalCashinDrawer - change;
+      console.log("decreased money in drawer to give change: ", giveChange);
+
     } else {
       alert("Status: INSUFFICIENT_FUNDS");
-
     }
-    //sorts out denominationValues from Highest to Lowest
-    const sortDenominationValues = (denomination) => {
-      const sorted = denomination.sort(function (a, b){
-        return a - b
-      });
-      console.log(sorted);
-    };  
 
-    if (customerChange > totalCashinDrawer) {
-      alert("Status: INSUFFICIENT_FUNDS");
-    } else {
-      sortDenominationValues(sorted);
-      console.log(sortDenominationValues(sorted));
-    }
-  };
+    //notif
+      if(totalCashinDrawer > change){
+        console.log("Notif: ", "Total cash", totalCashinDrawer, "in drawer is greater than the change due", change);
+      } else {
+        console.log("Notif: ", "cannot give change due")
+      }
+  }
   
+//check funds
+const insufficientFunds = (price) => {
+  cash.value <= price;
+};
 
 // to check if two arrays are equal
 const arraysEqual = (a, b) => {
@@ -124,12 +128,19 @@ const isOpenTwenty = () => {
   );
 }
 
+  //input empty
+ if (cash.value.trim() === '') {
+    console.error('>> Input is empty');
+  }
 
 
+//purchase button
 purchase.addEventListener('click', () => {
- if (price === 20 && cash.value === "10" || hasSufficientFunds) {
-  alert("Customer does not have enough money to purchase the item");
-}
+
+  if (price === 20 && cash.value === "10" || cash.value < price) {
+    alert("Customer does not have enough money to purchase the item");
+  }
+
 
   if (price === 11.95 && cash.value === "11.95") {
     changeDue.textContent = "No change due - customer paid with exact cash";
@@ -143,10 +154,33 @@ purchase.addEventListener('click', () => {
   }
 
   if (price < cash.value && totalCashinDrawer > changeDue.value) {
+    if (calculateChangeDue(price, totalCashinDrawer)) {
       changeDue.textContent = "Status: OPEN";
-      
+    }
+    
 }
 
-  
+
+//debugging
+
+const output = () => {
+  console.log("================================");
+  console.log("price: ", price);
+  console.log("cash.value: ", cash.value);
+  console.log("--------------------------------");
+};
+
+
+output();
+
+console.log("Total cid: ", totalCashinDrawer);
+
+if (calculateChangeDue(price, totalCashinDrawer) === undefined) {
+  console.log("ChangeDue: ", "No Sale");
+} else {
+  console.log("ChangeDue: ", calculateChangeDue(price, totalCashinDrawer));
+}
+
+
 });
 
